@@ -1,5 +1,13 @@
 package com.tns.dao;
 
-public interface StudentDao {
+import com.tns.entities.Student;
 
+public interface StudentDao
+{
+	abstract void addStudent(Student student);
+	abstract void getStudentById(int ID);
+	abstract void updateStudent(Student student);
+	abstract void removeStudent(Student student);
+	abstract void commitTransaction();
+	abstract void beginTransaction();
 }
