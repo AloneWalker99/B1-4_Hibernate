@@ -1,6 +1,7 @@
 package com.tns.entities;
 
 import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -8,25 +9,22 @@ import javax.persistence.Table;
 @Table(name="Student31")
 public class Student implements Serializable
 {
-	@SuppressWarnings("unused")
-	private static final long SerialVersionUID=1L;
+	private static final long serialVersionUID=1L;
 	@Id
 	private int ID;
 	private String Name;
-	public int getID()
-	{
+	public int getID() {
 		return ID;
 	}
-	public void setID(int iD)
-	{
+	public void setID(int iD) {
 		ID = iD;
 	}
-	public String getName()
-	{
+	public String getName() {
 		return Name;
 	}
-	public void setName(String name)
-	{
+	public void setName(String name) {
 		Name = name;
 	}
+	
+
 }

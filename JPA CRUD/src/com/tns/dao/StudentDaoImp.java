@@ -9,14 +9,10 @@ public class StudentDaoImp implements StudentDao
 	private EntityManager entityManager;
 	
 
-	public StudentDaoImp(EntityManager entityManager) 
+	public StudentDaoImp() 
 	{
 		entityManager=JPAUtil.getEntityManager();
 		
-	}
-
-	public StudentDaoImp() {
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -26,12 +22,12 @@ public class StudentDaoImp implements StudentDao
 	}
 
 	@Override
-	public Student getStudentById(int ID) 
-	{
+	public Student getStudentById(int ID) {
 		Student student =entityManager.find(Student.class,ID);
 		return student;
 		
 	}
+
 	@Override
 	public void updateStudent(Student student) {
 		entityManager.merge(student);
